@@ -1,10 +1,7 @@
-package Question6;
+package Question_No_6_Answer;
 
 
-public class Controller
-
-
-{
+public class NumberPrintingController {
 
     /**
      * The NumberPrinter class contains methods to print 0, even, and odd numbers. 
@@ -119,20 +116,20 @@ public class Controller
     }
 
     /**
-     * The ThreadController class manages the creation and synchronization of threads. 
+     * The NumberPrintingManager class manages the creation and synchronization of threads. 
      * It ensures that 0 is printed first, followed by the even and odd numbers in the correct order.
      */
-    static class ThreadController {
+    static class NumberPrintingManager {
         private final NumberPrinter printer;
         private int n;
 
         /**
-         * Constructor to initialize the ThreadController with the printer and the limit n up to which numbers are printed.
+         * Constructor to initialize the NumberPrintingManager with the printer and the limit n up to which numbers are printed.
          * 
          * @param printer The NumberPrinter object used to print numbers.
          * @param n The limit up to which numbers are printed (n can be changed to print a different range).
          */
-        public ThreadController(NumberPrinter printer, int n) {
+        public NumberPrintingManager(NumberPrinter printer, int n) {
             this.printer = printer;
             this.n = n;
         }
@@ -169,7 +166,7 @@ public class Controller
     }
 
     /**
-     * The main method creates a NumberPrinter and ThreadController object, 
+     * The main method creates a NumberPrinter and NumberPrintingManager object, 
      * and starts the printing process for the given limit n.
      * 
      * @param args Command line arguments (not used in this case).
@@ -178,7 +175,7 @@ public class Controller
     public static void main(String[] args) throws InterruptedException {
         NumberPrinter printer = new NumberPrinter(); // Create a new NumberPrinter object
         int n = 5; // Set the limit n to 5 (this can be modified)
-        ThreadController controller = new ThreadController(printer, n); // Create a ThreadController object
-        controller.startPrinting(); // Start the printing process
+        NumberPrintingManager manager = new NumberPrintingManager(printer, n); // Create a NumberPrintingManager object
+        manager.startPrinting(); // Start the printing process
     }
 }

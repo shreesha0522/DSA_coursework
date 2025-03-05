@@ -1,4 +1,4 @@
-package Question3;
+package Question_No_3_Answer;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
